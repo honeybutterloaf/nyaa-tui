@@ -1,6 +1,6 @@
 # nyaa-tui
 
-A terminal interface for searching Nyaa, reading release descriptions, managing
+A terminal interface for searching nyaa.si, reading release descriptions, managing
 aria2 downloads, playing local videos with mpv, and tracking watch progress.
 
 ## Install
