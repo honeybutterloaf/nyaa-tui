@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyaa-tui"
+version = "0.1.0"
+description = "A terminal interface for searching Nyaa, managing downloads, and tracking watched videos."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+dependencies = [
+    "feedparser>=6.0",
+    "textual>=0.50",
+]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Internet",
+    "Topic :: Utilities",
+]
+
+[project.optional-dependencies]
+images = [
+    "textual-image",
+    "pillow",
+    "numpy",
+]
+
+[project.scripts]
+nyaa-tui = "nyaa_tui.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
